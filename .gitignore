@@ -1,1 +1,3 @@
 /infraestrutura/terraform/terraform.tfvars
+/infraestrutura/terraform/terraform.tfstate
+/infraestrutura/terraform/terraform.tfstate.backup
