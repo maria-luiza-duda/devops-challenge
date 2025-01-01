@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-app
+  namespace: frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: frontend-app
+  template:
+    metadata:
+      labels:
+        app: frontend-app
+    spec:
+      containers:
+      - name: frontend-app
+        image: acrregistry4g9kjf.azurecr.io/frontend-app:v1
+        ports:
+        - containerPort: 8080
+        envFrom:
+        - configMapRef:
+            name: frontend-config

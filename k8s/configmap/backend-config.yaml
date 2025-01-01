@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-config
+  namespace: backend
+data:
+  DB_URL: "jdbc:sqlserver://sqlserver4g9kjf.database.windows.net:1433;databaseName=app-database"
+  DB_USER: "adminuser"
+  DB_PASS: "P@ssword!"
